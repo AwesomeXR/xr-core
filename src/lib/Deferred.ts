@@ -40,7 +40,10 @@ export class Deferred<T> {
     return this;
   }
 
-  constructor(readonly name: string = getInternalRandomString(true), public title?: string) {
+  constructor(
+    readonly name: string = getInternalRandomString(true),
+    public title?: string
+  ) {
     this.ret = new Promise<T>((resolve, reject) => {
       this.progress = 0;
 
