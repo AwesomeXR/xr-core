@@ -1,0 +1,24 @@
+{
+  "name": "xr-core",
+  "version": "1.0.23",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json -outDir dist",
+    "release": "npm run ci && npm run build && release-it"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6",
+    "release-it": "^16.1.5"
+  },
+  "dependencies": {
+    "ah-event-bus": "^4.0.14",
+    "ah-flow-node": "^2.1.1",
+    "ah-memory-fs": "^1.0.17"
+  }
+}

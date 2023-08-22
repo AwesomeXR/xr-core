@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "allowJs": true,
+    "outDir": "dist",
+    "lib": ["es2017", "DOM"],
+    "skipLibCheck": true
+  },
+  "include": ["src", "__test__"]
+}
