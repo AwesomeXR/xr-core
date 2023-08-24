@@ -1,0 +1,28 @@
+{
+  "create flow node define": {
+    "prefix": "cfnd",
+    "body": [
+      "import { IFlowNodeMeta, IFlowNodeTypeRegisterData } from 'ah-flow-node';",
+      "import { BaseInput, BaseOutput } from '../base';",
+      "",
+      "declare module 'ah-flow-node' {",
+      "  interface IFlowNodeMetaMap {",
+      "    ${TM_FILENAME_BASE}: IFlowNodeMeta<'${TM_FILENAME_BASE}', {} & BaseInput, {} & BaseOutput>;",
+      "  }",
+      "}",
+      "",
+      "export const ${TM_FILENAME_BASE}RegisterData: IFlowNodeTypeRegisterData<'${TM_FILENAME_BASE}'> = {",
+      "  define: {",
+      "    className: '${TM_FILENAME_BASE}',",
+      "    cnName: '',",
+      "    input: { ...BaseInput },",
+      "    output: { ...BaseOutput },",
+      "  },",
+      "  setup(ctx) {",
+      "    throw new Error('not implement: ' + ctx._define.className);",
+      "  },",
+      "};",
+      ""
+    ]
+  }
+}
