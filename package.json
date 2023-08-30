@@ -11,6 +11,7 @@
     "build": "tsc -p tsconfig.json -outDir dist",
     "release": "npm run ci && npm run build && release-it"
   },
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^3.0.2",
     "typescript": "^5.1.6",
